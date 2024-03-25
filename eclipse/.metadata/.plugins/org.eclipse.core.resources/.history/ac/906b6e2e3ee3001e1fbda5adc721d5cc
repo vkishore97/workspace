@@ -1,0 +1,57 @@
+package dsa.doublelinkedlist;
+
+public class Node {
+	int data;
+	Node prev;
+	Node next ;
+	
+	public Node(int data) {
+		// TODO Auto-generated constructor stub
+		this.data = data;
+		this.prev = null;
+		this.next = null;
+	}
+	
+	public static Node insertAtBegin(Node head, int data) {
+		Node newNode = new Node(data);
+		if(head==null) return newNode;
+		newNode.next = head;
+		head.prev = newNode;
+		return newNode;
+	}
+	
+	public static Node insertAtLast(Node head, int data) {
+		Node newNode = new Node(data);
+		if(head==null) return newNode;
+		Node curr = head;
+		while(curr.next!=null) {
+			curr = curr.next;
+		}
+		curr.next = newNode;
+		newNode.prev = curr;
+		return head;
+	}
+	
+	public static Node reverse(Node head) {
+		return null;
+	}
+	
+	public static Node deleteAtHead(Node head) {
+		head = head.next;
+		head.prev.next = null;
+		head.prev = null;
+		return head;
+		
+	}
+	
+	public static Node deleteAtEnd(Node head) {
+		Node curr = head;
+		while(curr.next.next!=null) {
+			curr = curr.next;
+		}
+		curr.next.prev = null;
+		curr.next = null;
+		return head;
+	}
+
+}

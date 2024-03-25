@@ -1,0 +1,19 @@
+package dsa.linkedlist;
+
+public class MainSingle {
+	public static void main(String[] args) {
+		SingleNode n1 = new SingleNode(1);
+		SingleNode n2 = new SingleNode(2);
+		SingleNode n3 = new SingleNode(3);
+		SingleNode n4 = new SingleNode(4);
+		SingleNode n5 = new SingleNode(5);
+		
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
+		n4.next = n5;
+		
+		SingleNode.print(n1);
+		
+	}
+}

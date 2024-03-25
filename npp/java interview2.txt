@@ -1,0 +1,1 @@
+instance variable is a varibale created inside a class but outside a method. these don't need memory at compile time.

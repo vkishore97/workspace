@@ -1,0 +1,76 @@
+package dsa.doublelinkedlist;
+
+public class Node {
+	int data;
+	DoubleNode prev;
+	DoubleNode next ;
+	
+	public Node(int data) {
+		// TODO Auto-generated constructor stub
+		this.data = data;
+		this.prev = null;
+		this.next = null;
+	}
+	
+	public static void traverse(DoubleNode head) {
+		if(head!=null) {
+			while(head!=null) {
+				System.out.println(head.data);
+				head = head.next;
+			}
+		}
+	}
+	
+	public static DoubleNode insertAtBegin(DoubleNode head, int data) {
+		DoubleNode newNode = new DoubleNode(data);
+		if(head==null) return newNode;
+		newNode.next = head;
+		head.prev = newNode;
+		return newNode;
+	}
+	
+	public static DoubleNode insertAtLast(DoubleNode head, int data) {
+		DoubleNode newNode = new DoubleNode(data);
+		if(head==null) return newNode;
+		DoubleNode curr = head;
+		while(curr.next!=null) {
+			curr = curr.next;
+		}
+		curr.next = newNode;
+		newNode.prev = curr;
+		return head;
+	}
+	
+	public static DoubleNode deleteAtHead(DoubleNode head) {
+		head = head.next;
+		head.prev.next = null;
+		head.prev = null;
+		return head;
+		
+	}
+	
+	public static DoubleNode deleteAtEnd(DoubleNode head) {
+		DoubleNode curr = head;
+		while(curr.next.next!=null) {
+			curr = curr.next;
+		}
+		curr.next.prev = null;
+		curr.next = null;
+		return head;
+	}
+	
+	//VVIP
+	public static DoubleNode reverse(DoubleNode head) {
+		if(head == null || head.next == null) return head;
+		DoubleNode curr = head;
+		DoubleNode temp = null;
+		while(curr!=null) {
+			temp = curr.prev;
+			curr.prev = curr.next;
+			curr.next = temp;
+			curr = curr.prev;
+		}
+		return temp.prev;
+	}
+
+}

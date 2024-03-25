@@ -1,0 +1,23 @@
+package dsa.doublelinkedlist;
+
+public class Main {
+	public static void main(String[] args) {
+		DoubleNode n1 = new DoubleNode(10);
+		DoubleNode n2 = new DoubleNode(20);
+		DoubleNode n3 = new DoubleNode(30);
+		DoubleNode n4 = new DoubleNode(40);
+//		Node n1 = new Node(50);
+//		Node n1 = new Node(60);
+		n1.next = n2;
+		n2.prev = n1;
+		n2.next = n3;
+		n3.prev = n2;
+		n3.next = n4;
+		n4.prev = n3;
+		
+		DoubleNode.traverse(DoubleNode.insertAtBegin(null, 1));
+		
+		//Node.(Node.insertAtBegin(null, 1));
+		
+	}
+}

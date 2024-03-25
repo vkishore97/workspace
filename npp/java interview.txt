@@ -1,0 +1,76 @@
+methods in object class
+how to get fully qualified path (class and package of a class)
+how to clone an object using the clone method from the Object class?
+how to access protected methods in other class? --> subclass
+why do we use hashcode and equals method?
+comparable and compartor
+deep cloning and shallow cloing
+serialization
+externalization
+log4j
+design patterns
+abstract factory
+
+achin mamu
+
+how to create a signleton class?
+how to create a muttable class?
+how to create an immutable class?
+marker interface
+serializable
+multithreading
+eg of singleton class
+diamond problem
+impact of java8 allowing static method and default  method in iterfaces in java8
+reason behind allowing static method and default  method in iterfaces
+diff bn abstract calss and interface
+why do we instance block if already have constructor?
+why string is immutable? 5M question + String constant pool
+
+collection:
+difference between collection(interface) and collections (class)
+2M arraylist vs linkedlist
+5M deep -> internal working of hashmap
+hashtable vs hashmap
+hashset vs hashmap
+equal & hashcode method
+treeset vs hashset
+
+string buffer vs string builder
+
+new features introduced in java8 :- stream, lambda, functional interface, optional class
+optional class -> use, reason of introduction --> to avoid NPE
+
+exception handling
+exception vs error
+checked exception vs unchecked exception with example
+final finally finalize
+throw vs throws
+
+compiltime exception
+runtime class -> 
+
+try catch finally -> how to skip finally
+try without catch -> try with resources
+try without catch with finally
+we can use multiple catch
+sequence of multiple catch when catch blocks has relation parent-child -> answer is compilation error
+
+multithreading
+thread synchronization -> producer and consumer examples
+thread lifecycle (wait and notify)
+why interface implementatoin is better class extension while creating a multithreaded java app
+deadlock
+synchronous asynchronous
+sleep vs wait
+how to avoid deadlock -> mutual exclusion ......
+
+object class methods
+
+
+oops
+
+
+java 8 features
+stream api
+lambda expression
